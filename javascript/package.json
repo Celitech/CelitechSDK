@@ -1,7 +1,7 @@
 {
   "name": "celitechsdk",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000C\u0000e\u0000l\u0000i\u0000t\u0000e\u0000c\u0000h\u0000S\u0000D\u0000K\u0000\r\u0000 \u0000",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/Celitech/CelitechSDK/issues"
   },
-  "homepage": "https://github.com/Celitech/CelitechSDK#readme"
+  "homepage": "https://github.com/Celitech/CelitechSDK#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "axios-oauth-client": "^1.4.4",
+    "axios-token-interceptor": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/axios-token-interceptor": "^0.2.3",
+    "@types/node": "latest"
+  }
 }
