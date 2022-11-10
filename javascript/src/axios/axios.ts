@@ -6,7 +6,7 @@ import axios from "axios";
 const oauth = require("axios-oauth-client"); // No TS support for this library - TS PR opened
 import tokenProvider from "axios-token-interceptor";
 
-export function getAxiosInstance(clientId, clientSecret) {
+export function getAxiosInstance(clientId: string, clientSecret: string) {
   const getClientCredentials = oauth.client(axios.create(), {
     url: "https://test-core-partners.auth.us-east-1.amazoncognito.com/oauth2/token",
     grant_type: "client_credentials",
