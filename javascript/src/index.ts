@@ -2,8 +2,8 @@ import { getAxiosInstance } from "./axios/axios";
 import { Destinations } from "./classes/Destinations";
 
 export class Celitech {
-  //public readonly purchases;
   public readonly destinations;
+  //public readonly purchases;
   //public readonly packages;
 
   public constructor(clientId: string, clientSecret: string) {

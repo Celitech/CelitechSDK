@@ -2,10 +2,15 @@
   "name": "celitechsdk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Celitech/CelitechSDK.git"
@@ -19,7 +24,8 @@
   "dependencies": {
     "axios": "^0.24.0",
     "axios-oauth-client": "^1.4.4",
-    "axios-token-interceptor": "^0.2.0"
+    "axios-token-interceptor": "^0.2.0",
+    "microbundle": "^0.15.1"
   },
   "devDependencies": {
     "@types/axios-token-interceptor": "^0.2.3",

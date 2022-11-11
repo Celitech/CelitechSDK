@@ -1,5 +1,12 @@
 import { AxiosInstance } from "axios";
 
+interface Destination {
+  name: string;
+  destination: string;
+}
+
+type DestinationsListResponse = Destination[];
+
 export class Destinations {
   private axiosInstance;
 
@@ -7,8 +14,8 @@ export class Destinations {
     this.axiosInstance = axiosInstance;
   }
 
-  public async getDestinations() {
+  public async list(): Promise<DestinationsListResponse> {
     const response = await this.axiosInstance.get("/destinations");
-    return response;
+    return response.data;
   }
 }
