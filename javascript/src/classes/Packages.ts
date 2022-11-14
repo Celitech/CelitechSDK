@@ -33,6 +33,7 @@ export class Packages {
   public async list(
     request?: PackagesListRequest
   ): Promise<PackagesListResponse> {
+    //endpoint has optional query parameters
     if (request) {
       const response = await this.axiosInstance.get("/packages", {
         params: request,
