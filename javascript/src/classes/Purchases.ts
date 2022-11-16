@@ -117,7 +117,6 @@ export class Purchases {
     const response = await this.axiosInstance.get(
       `/purchases/${request.purchaseId}/consumption`
     );
-    console.log("here =>", request.purchaseId);
     return response.data;
   }
 }
