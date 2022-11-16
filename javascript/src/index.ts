@@ -1,4 +1,5 @@
 import { getAxiosInstance } from "./axios/axios";
+import { Customers } from "./classes/Customers";
 import { Destinations } from "./classes/Destinations";
 import { Purchases } from "./classes/Purchases";
 import { Packages } from "./classes/Packages";
@@ -16,6 +17,7 @@ export class Celitech {
   public readonly destinations;
   public readonly purchases;
   public readonly packages;
+  public readonly customers;
 
   public constructor({ clientId, clientSecret }: Credentials) {
     const axiosInstance = getAxiosInstance(clientId, clientSecret);
@@ -23,5 +25,6 @@ export class Celitech {
     this.destinations = new Destinations(axiosInstance);
     this.purchases = new Purchases(axiosInstance);
     this.packages = new Packages(axiosInstance);
+    this.customers = new Customers(axiosInstance);
   }
 }
