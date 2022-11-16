@@ -13,8 +13,8 @@ interface CreatePurchaseResponse {
   purchase: {
     id: string;
     packageId: string;
-    startTime: 0;
-    endTime: 0;
+    startTime: number;
+    endTime: number;
   };
   profile: {
     iccid: string;
