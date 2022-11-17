@@ -11,7 +11,7 @@ interface Credentials {
   clientSecret: string;
 }
 
-export class Celitech {
+export default class Celitech {
   public readonly destinations;
   public readonly purchases;
   public readonly packages;
