@@ -3,6 +3,7 @@ import { Customers } from "./classes/Customers";
 import { Destinations } from "./classes/Destinations";
 import { Purchases } from "./classes/Purchases";
 import { Packages } from "./classes/Packages";
+import { Esim } from "./classes/Esim";
 
 interface Credentials {
   clientId: string;
@@ -18,6 +19,7 @@ export class Celitech {
   public readonly purchases;
   public readonly packages;
   public readonly customers;
+  public readonly esim;
 
   public constructor({ clientId, clientSecret }: Credentials) {
     const axiosInstance = getAxiosInstance(clientId, clientSecret);
@@ -26,5 +28,6 @@ export class Celitech {
     this.purchases = new Purchases(axiosInstance);
     this.packages = new Packages(axiosInstance);
     this.customers = new Customers(axiosInstance);
+    this.esim = new Esim(axiosInstance);
   }
 }
