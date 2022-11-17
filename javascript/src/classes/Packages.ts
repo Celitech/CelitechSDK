@@ -5,7 +5,7 @@ interface PackagesListRequest {
   startTime?: number;
   endtime?: number;
   duration?: number;
-  afterCursor?: string | null;
+  afterCursor?: string;
   limit?: number;
 }
 
@@ -20,7 +20,7 @@ interface Package {
 
 interface PackagesListResponse {
   packages: Package[];
-  afterCursor: string;
+  afterCursor: string | null;
 }
 
 export class Packages {
