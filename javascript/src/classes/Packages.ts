@@ -20,7 +20,7 @@ interface Package {
 
 interface PackagesListResponse {
   packages: Package[];
-  afterCursor: string;
+  afterCursor: string | null;
 }
 
 export class Packages {

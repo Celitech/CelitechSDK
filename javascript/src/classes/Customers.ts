@@ -25,7 +25,7 @@ interface Customer {
 }
 
 interface ListCustomersResponse {
-  afterCursor: string;
+  afterCursor: string | null;
   customers: Customer[];
 }
 
