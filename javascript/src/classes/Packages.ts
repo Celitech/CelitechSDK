@@ -5,7 +5,7 @@ interface PackagesListRequest {
   startTime?: number;
   endtime?: number;
   duration?: number;
-  afterCursor?: string;
+  afterCursor?: string | null;
   limit?: number;
 }
 

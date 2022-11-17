@@ -64,7 +64,7 @@ interface Purchase {
 
 interface ListPurchasesResponse {
   purchases: Purchase[];
-  afterCursor: string;
+  afterCursor: string | null;
 }
 
 interface CheckConsumptionRequest {
