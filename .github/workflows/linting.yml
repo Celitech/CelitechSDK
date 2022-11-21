@@ -23,7 +23,6 @@ jobs:
 
       - name: Install npm version 8
         run: |
-          cd javascript
           npm i -g npm@8.5.4
 
       - name: Install dependencies
