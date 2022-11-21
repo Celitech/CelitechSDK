@@ -1,0 +1,52 @@
+{
+  "env": {
+    "node": true,
+    "es2017": true
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    // note: you must disable the base rule as it can report incorrect errors
+    //
+    //
+    // future improvement - inforce camelcase usage ( by showing error )
+    // the 2nd one could be deprecated - https://typescript-eslint.io/rules/naming-convention/
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": "off",
+
+    // future improvement - inforce type usage ( by showing error )
+    "@typescript-eslint/no-explicit-any": "off",
+
+    // prevent having unused vars
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+
+    // prevent having invalid this
+    "no-invalid-this": "off",
+    "@typescript-eslint/no-invalid-this": ["error"],
+
+    // prevent having an async function without await/catch
+    "@typescript-eslint/no-floating-promises": ["error"],
+
+    // prevent having empty function/arrow function
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": ["error"],
+
+    // prevent assigning new value/values to a const
+    "no-const-assign": "error",
+
+    // prevent usage before defining
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+
+    // prevent having unreachable code
+    "no-unreachable": "error",
+
+    "@typescript-eslint/no-var-requires": "off"
+  }
+}

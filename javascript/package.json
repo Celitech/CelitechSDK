@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint --ext .ts,.js src"
   },
   "files": [
     "dist"
@@ -28,6 +29,8 @@
   },
   "devDependencies": {
     "@types/axios-token-interceptor": "^0.2.3",
-    "@types/node": "latest"
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "eslint": "^8.28.0"
   }
 }
