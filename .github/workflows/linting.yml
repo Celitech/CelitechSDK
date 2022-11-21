@@ -29,3 +29,8 @@ jobs:
         run: |
           cd javascript
           npm install
+
+      - name: Lint the code base
+        run: |
+          cd javascript
+          npm run lint
