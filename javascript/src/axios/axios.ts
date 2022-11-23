@@ -2,6 +2,9 @@
 Implement axios oauth client as middleware (interceptor) for the axios instance 
 to be used for all API calls
 */
+
+/* eslint-disable @typescript-eslint/naming-convention */
+
 import axios from "axios";
 import oauth from "axios-oauth-client";
 import tokenProvider from "axios-token-interceptor";
@@ -9,9 +12,9 @@ import tokenProvider from "axios-token-interceptor";
 export function getAxiosInstance(clientId: string, clientSecret: string) {
   const getClientCredentials = oauth.client(axios.create(), {
     url: "https://test-core-partners.auth.us-east-1.amazoncognito.com/oauth2/token",
-    grantType: "client_credentials",
-    clientId: clientId,
-    clientSecret: clientSecret,
+    grant_type: "client_credentials",
+    client_id: clientId,
+    client_secret: clientSecret,
   });
 
   const clientAxios = axios.create({
