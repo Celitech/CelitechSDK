@@ -1,0 +1,41 @@
+name: Linting
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "javascript/**"
+
+jobs:
+  Lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js for use with actions
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install npm version 8
+        run: |
+          npm i -g npm@8.5.4
+
+      - name: Install dependencies
+        run: |
+          cd javascript
+          npm install
+
+      - name: Typechecking
+        run: |
+          cd javascript
+          tsc --noEmit
+
+      - name: Lint the code base
+        run: |
+          cd javascript
+          npm run lint

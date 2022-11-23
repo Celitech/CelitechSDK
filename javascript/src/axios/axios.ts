@@ -2,8 +2,11 @@
 Implement axios oauth client as middleware (interceptor) for the axios instance 
 to be used for all API calls
 */
+
+/* eslint-disable @typescript-eslint/naming-convention */
+
 import axios from "axios";
-const oauth = require("axios-oauth-client"); // No TS support for this library - TS PR opened
+import oauth from "axios-oauth-client";
 import tokenProvider from "axios-token-interceptor";
 
 export function getAxiosInstance(clientId: string, clientSecret: string) {
