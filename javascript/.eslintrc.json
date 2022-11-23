@@ -14,13 +14,10 @@
     // note: you must disable the base rule as it can report incorrect errors
     //
     //
-    // future improvement - inforce camelcase usage ( by showing error )
-    // the 2nd one could be deprecated - https://typescript-eslint.io/rules/naming-convention/
-    "camelcase": "off",
-    "@typescript-eslint/camelcase": "off",
+    "camelcase": ["error"],
 
-    // future improvement - inforce type usage ( by showing error )
-    "@typescript-eslint/no-explicit-any": "off",
+    //prevent type any
+    "@typescript-eslint/no-explicit-any": ["error"],
 
     // prevent having unused vars
     "no-unused-vars": "off",
@@ -45,8 +42,6 @@
     "@typescript-eslint/no-use-before-define": ["error"],
 
     // prevent having unreachable code
-    "no-unreachable": "error",
-
-    "@typescript-eslint/no-var-requires": "off"
+    "no-unreachable": "error"
   }
 }

@@ -30,6 +30,11 @@ jobs:
           cd javascript
           npm install
 
+      - name: Typechecking
+        run: |
+          cd javascript
+          tsc --noEmit
+
       - name: Lint the code base
         run: |
           cd javascript
