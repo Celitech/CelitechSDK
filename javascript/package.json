@@ -39,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "eslint": "^8.28.0",
+    "ts-node": "~10.7.0",
     "release-it": "^15.5.0"
   }
 }
