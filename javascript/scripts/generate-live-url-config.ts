@@ -8,11 +8,11 @@ const codeToGenerate =
   `export const OAUTH2_URL = "${OAUTH2_URL}";\n` +
   `export const API_URL = "${API_URL}";\n`;
 
-if (!fs.existsSync("../src/config")) {
+if (!fs.existsSync("src/config")) {
   fs.mkdirSync("config");
 }
 
-fs.writeFile("../src/config/urls-config.ts", codeToGenerate, function (err) {
+fs.writeFile("src/config/urls-config.ts", codeToGenerate, function (err) {
   if (err) {
     return console.log(err);
   }
