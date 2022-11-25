@@ -7,7 +7,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "lint": "eslint --ext .ts,.js src"
+    "lint": "eslint --ext .ts,.js src",
+    "config:release-it": "ts-node scripts/generate-release-it-config",
+    "config:live": "ts-node scripts/generate-live-url-config",
+    "config:test": "ts-node scripts/generate-live-url-config",
+    "prepublishOnly": "npm run config:live && npm run build",
+    "release": "release-it --ci"
   },
   "files": [
     "dist"
@@ -32,6 +37,7 @@
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
-    "eslint": "^8.28.0"
+    "eslint": "^8.28.0",
+    "release-it": "^15.5.0"
   }
 }
