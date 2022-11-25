@@ -8,17 +8,18 @@ to be used for all API calls
 import axios from "axios";
 import oauth from "axios-oauth-client";
 import tokenProvider from "axios-token-interceptor";
+import { API_URL, OAUTH2_URL } from "../config/urls-config";
 
 export function getAxiosInstance(clientId: string, clientSecret: string) {
   const getClientCredentials = oauth.client(axios.create(), {
-    url: "https://test-core-partners.auth.us-east-1.amazoncognito.com/oauth2/token",
+    url: OAUTH2_URL,
     grant_type: "client_credentials",
     client_id: clientId,
     client_secret: clientSecret,
   });
 
   const clientAxios = axios.create({
-    baseURL: "https://tshnuiufz7.execute-api.us-east-1.amazonaws.com/test",
+    baseURL: API_URL,
   });
 
   //Add interceptor (middleware) to axios instance
