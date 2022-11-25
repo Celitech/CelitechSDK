@@ -9,7 +9,7 @@ const codeToGenerate =
   `export const API_URL = "${API_URL}";\n`;
 
 if (!fs.existsSync("src/config")) {
-  fs.mkdirSync("config");
+  fs.mkdirSync("src/config");
 }
 
 fs.writeFile("src/config/urls-config.ts", codeToGenerate, function (err) {
