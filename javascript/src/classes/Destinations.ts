@@ -5,7 +5,9 @@ interface Destination {
   destination: string;
 }
 
-type DestinationsListResponse = Destination[];
+type DestinationsListResponse = {
+  destinations: Destination[];
+};
 
 export class Destinations {
   private axiosInstance;
