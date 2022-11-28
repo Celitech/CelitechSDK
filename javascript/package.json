@@ -8,10 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "lint": "eslint --ext .ts,.js src",
-    "config:live": "ts-node scripts/generate-live-url-config",
-    "config:test": "ts-node scripts/generate-test-url-config",
-    "prepublishOnly": "npm run config:live && npm run build",
-    "postpublish": "npm run config:test",
+    "config:urls": "ts-node scripts/generate-urls-config",
+    "prepublishOnly": "npm run config:urls && npm run build",
     "release": "release-it --ci"
   },
   "files": [
