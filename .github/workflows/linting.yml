@@ -33,7 +33,7 @@ jobs:
       - name: Generate configs
         run: |
           cd javascript
-          npm run config:test
+          npm run config:urls
 
       - name: Typechecking
         run: |
