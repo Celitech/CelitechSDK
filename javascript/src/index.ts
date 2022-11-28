@@ -9,6 +9,7 @@ import { Sessions } from "./classes/Sessions";
 interface Credentials {
   clientId: string;
   clientSecret: string;
+  environment: "PRODUCTION" | "DEVELOPMENT";
 }
 
 export default class Celitech {
@@ -19,8 +20,8 @@ export default class Celitech {
   public readonly esim;
   public readonly sessions;
 
-  public constructor({ clientId, clientSecret }: Credentials) {
-    const axiosInstance = getAxiosInstance(clientId, clientSecret);
+  public constructor({ clientId, clientSecret, environment }: Credentials) {
+    const axiosInstance = getAxiosInstance(clientId, clientSecret, environment);
 
     this.destinations = new Destinations(axiosInstance);
     this.purchases = new Purchases(axiosInstance);

@@ -8,9 +8,33 @@ to be used for all API calls
 import axios from "axios";
 import oauth from "axios-oauth-client";
 import tokenProvider from "axios-token-interceptor";
-import { API_URL, OAUTH2_URL } from "../config/urls-config";
+import {
+  TEST_API_URL,
+  TEST_OAUTH2_URL,
+  LIVE_API_URL,
+  LIVE_OAUTH2_URL,
+} from "../config/urls-config";
 
-export function getAxiosInstance(clientId: string, clientSecret: string) {
+export function getAxiosInstance(
+  clientId: string,
+  clientSecret: string,
+  env: "PRODUCTION" | "DEVELOPMENT"
+) {
+  let OAUTH2_URL;
+  let API_URL;
+
+  if (env === "PRODUCTION") {
+    OAUTH2_URL = LIVE_OAUTH2_URL;
+    API_URL = LIVE_API_URL;
+  } else if (env === "DEVELOPMENT") {
+    OAUTH2_URL = TEST_OAUTH2_URL;
+    API_URL = TEST_API_URL;
+  } else {
+    throw new Error(
+      "Invalid environment (allowed values are PRODUCTION or DEVELOPMENT)"
+    );
+  }
+
   const getClientCredentials = oauth.client(axios.create(), {
     url: OAUTH2_URL,
     grant_type: "client_credentials",
