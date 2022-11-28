@@ -20,12 +20,19 @@ export function getAxiosInstance(
   clientSecret: string,
   env: "PRODUCTION" | "DEVELOPMENT"
 ) {
-  let OAUTH2_URL = TEST_OAUTH2_URL;
-  let API_URL = TEST_API_URL;
+  let OAUTH2_URL;
+  let API_URL;
 
   if (env === "PRODUCTION") {
     OAUTH2_URL = LIVE_OAUTH2_URL;
     API_URL = LIVE_API_URL;
+  } else if (env === "DEVELOPMENT") {
+    OAUTH2_URL = TEST_OAUTH2_URL;
+    API_URL = TEST_API_URL;
+  } else {
+    throw new Error(
+      "Invalid environment (allowed values are PRODUCTION or DEVELOPMENT)"
+    );
   }
 
   const getClientCredentials = oauth.client(axios.create(), {
