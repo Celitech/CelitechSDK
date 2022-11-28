@@ -30,11 +30,6 @@ jobs:
           cd javascript
           npm install
 
-      - name: Generate configs
-        run: |
-          cd javascript
-          npm run config:urls
-
       - name: Typechecking
         run: |
           cd javascript
