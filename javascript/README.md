@@ -1,7 +1,7 @@
 <h1 align="center">
     <a style="text-decoration: none" href="https://www.celitech.com">
       <img width="300px" src="https://celitech.com/wp-content/uploads/2022/11/CELITECH-eSIM-Platform_2-1024x306.jpg" />
-      <p align="center">Celitech - eSIM API</p>
+      <p align="center">CELITECH - eSIM API for Travel Companies </p>
     </a>
 </h1>
 
