@@ -20,7 +20,7 @@ yarn add @celitech/celitech-sdk
 
 ## Setup
 
-The package needs to be configured with your account's clientId and clientSecret, which is available in the <a style="text-decoration: none" href="https://www.celitech.net">Celitech Dashboard.</a>
+The package needs to be configured with your account's clientId and clientSecret, which are available in the <a style="text-decoration: none" href="https://www.celitech.net">Celitech Dashboard.</a>
 
 ```js
 import Celitech from "@celitech/celitech-sdk";
@@ -34,8 +34,8 @@ const celitech = new Celitech({
 
 | Option              | Required | Default     | Description                                                                                 |
 | ------------------- | -------- | ----------- | ------------------------------------------------------------------------------------------- | 
-| `clientId`          | `true`   |             | The Client ID to be used for OAUTH 2.0 - available on the dashboard                         |
-| `clientSecret`      | `true`   |             | The Client Secret to be used for OAUTH 2.0 - available on the dashboard                     |
+| `clientId`          | `true`   |             | The Client ID to be used for OAUTH 2.0 - available on your Celitech dashboard               |
+| `clientSecret`      | `true`   |             | The Client Secret to be used for OAUTH 2.0 - available on your Celitech dashboard           |
 | `environment`       | `true`   |             | The environment used ( PRODUCTION or DEVELOPMENT ) - DEVELOPMENT is currently not supported |
 
 ## Usage example
