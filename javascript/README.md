@@ -54,7 +54,7 @@ celitech.destinations
 Or using ES modules and async/await:
 
 ```js
-const response =await celitech.destinations.list();
+const response = await celitech.destinations.list();
 
 console.log(response);
 ```
