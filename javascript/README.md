@@ -16,14 +16,29 @@ Typescript/Javascript library for interacting with the Celitech API
 npm install @celitech/celitech-sdk
 ```
 
-# Usage
+# Setup
+
+The package needs to be configured with your account's clientId and clientSecret, which is available in the <a style="text-decoration: none" href="https://www.celitech.net">Celitech Dashboard.</a>
 
 ```js
 import Celitech from "@celitech/celitech-sdk";
 
 const celitech = new Celitech({
-  clientId: "793hikbcujoq80spsl6hfa31tq",
-  clientSecret: "12emhq07p3887v8qeaq7pkqffc3d8t0kjgle7hjgnn6oaajmda1c",
+  clientId: "CLIENT_ID",
+  clientSecret: "CLIENT_SECRET",
   environment: "PRODUCTION", // DEVELOPMENT environment is not supported yet
 });
+```
+
+# Usage example
+
+```js
+celitech.destinations
+  .list()
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 ```
