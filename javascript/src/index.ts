@@ -12,7 +12,7 @@ interface Credentials {
   environment: "PRODUCTION" | "DEVELOPMENT";
 }
 
-export default class Celitech {
+class Celitech {
   public readonly destinations;
   public readonly purchases;
   public readonly packages;
@@ -31,3 +31,5 @@ export default class Celitech {
     this.sessions = new Sessions(axiosInstance);
   }
 }
+
+export = Celitech;
