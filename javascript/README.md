@@ -14,7 +14,7 @@ Typescript/Javascript library for interacting with the Celitech API
 
 ```sh
 npm install @celitech/celitech-sdk
-
+#or
 yarn add @celitech/celitech-sdk
 ```
 
