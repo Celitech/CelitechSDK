@@ -32,11 +32,11 @@ const celitech = new Celitech({
 });
 ```
 
-| Option              | Required | Default     | Description                                                                      |
-| ------------------- | -------- | ----------- | -------------------------------------------------------------------------------- | 
-| `clientId`          | `true`   |             | The Client ID to be used for OAUTH 2.0 - available on the dashboard              |
-| `clientSecret`      | `true`   |             | The Client Secret to be used for OAUTH 2.0 - available on the dashboard          |
-| `environment`       | `true`   |             | The environment used ( PRODUCTION | DEVELOPMENT ) - PRODUCTION is only supported |
+| Option              | Required | Default     | Description                                                                                 |
+| ------------------- | -------- | ----------- | ------------------------------------------------------------------------------------------- | 
+| `clientId`          | `true`   |             | The Client ID to be used for OAUTH 2.0 - available on the dashboard                         |
+| `clientSecret`      | `true`   |             | The Client Secret to be used for OAUTH 2.0 - available on the dashboard                     |
+| `environment`       | `true`   |             | The environment used ( PRODUCTION or DEVELOPMENT ) - DEVELOPMENT is currently not supported |
 
 ## Usage example
 
