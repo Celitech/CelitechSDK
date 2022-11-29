@@ -4,11 +4,18 @@
       <p align="center">CELITECH - eSIM API for Travel Companies </p>
     </a>
 </h1>
+<h2 align="center">
+  <a href="https://celitech.com">Website</a> | <a href="https://docs.celitech.com">Documentation</a>
+<h2>
 
 Typescript/Javascript library for interacting with the Celitech API
 
 ![Lint/Test](https://github.com/Celitech/CelitechSDK/actions/workflows/linting.yml/badge.svg)
 [![NPM version](https://img.shields.io/npm/v/@celitech/celitech-sdk)](https://www.npmjs.com/package/@celitech/celitech-sdk)
+
+## Usage Documentation
+
+You can find general usage documentation at <https://docs.celitech.com>.  For complete API documentation with code examples for each endpoint in all of our official client libraries head over to our API documentation site at <https://api.celitech.com>.
 
 ## Installation
 
@@ -32,13 +39,13 @@ const celitech = new Celitech({
 });
 ```
 
-| Option              | Required | Default     | Description                                                                                 |
-| ------------------- | -------- | ----------- | ------------------------------------------------------------------------------------------- | 
-| `clientId`          | `true`   |             | The Client ID to be used for OAUTH 2.0 - available on your Celitech dashboard               |
-| `clientSecret`      | `true`   |             | The Client Secret to be used for OAUTH 2.0 - available on your Celitech dashboard           |
-| `environment`       | `true`   |             | The environment used ( PRODUCTION or DEVELOPMENT ) - DEVELOPMENT is currently not supported |
+| Option         | Required | Default | Description                                                                                 |
+| -------------- | -------- | ------- | ------------------------------------------------------------------------------------------- |
+| `clientId`     | `true`   |         | The Client ID to be used for OAUTH 2.0 - available on your Celitech dashboard               |
+| `clientSecret` | `true`   |         | The Client Secret to be used for OAUTH 2.0 - available on your Celitech dashboard           |
+| `environment`  | `true`   |         | The environment used ( PRODUCTION or DEVELOPMENT ) - DEVELOPMENT is currently not supported |
 
-## Usage example
+## Basic example
 
 ```js
 celitech.destinations
