@@ -15,7 +15,7 @@ Typescript/Javascript library for interacting with the Celitech API
 
 ## Usage Documentation
 
-You can find general usage documentation at <https://docs.celitech.com>.  For complete API documentation with code examples for each endpoint in all of our official client libraries head over to our API documentation site at <https://api.celitech.com>.
+You can find general usage documentation at <https://docs.celitech.com>. For complete API documentation with code examples for each endpoint in all of our official client libraries head over to our API documentation site at <https://api.celitech.com>.
 
 ## Installation
 
@@ -30,7 +30,7 @@ yarn add @celitech/celitech-sdk
 The package needs to be configured with your account's clientId and clientSecret, which are available in the <a style="text-decoration: none" href="https://www.celitech.net">Celitech Dashboard.</a>
 
 ```js
-import Celitech from "@celitech/celitech-sdk";
+import { Celitech } from "@celitech/celitech-sdk";
 
 const celitech = new Celitech({
   clientId: "CLIENT_ID",
