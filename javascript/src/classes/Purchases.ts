@@ -1,6 +1,6 @@
 import { AxiosInstance } from "axios";
 
-interface CreatePurchaseRequest {
+export interface CreatePurchaseRequest {
   destination: string;
   dataLimitInGB: number;
   startTime: number;
@@ -9,7 +9,7 @@ interface CreatePurchaseRequest {
   sessionId?: number;
 }
 
-interface CreatePurchaseResponse {
+export interface CreatePurchaseResponse {
   purchase: {
     id: string;
     packageId: string;
@@ -22,19 +22,19 @@ interface CreatePurchaseResponse {
   };
 }
 
-interface EditPurchaseRequest {
+export interface EditPurchaseRequest {
   purchaseId: string;
   startTime: number;
   endTime: number;
 }
 
-interface EditPurchaseResponse {
+export interface EditPurchaseResponse {
   purchaseId: string;
   newStartTime: number;
   newEndTime: number;
 }
 
-interface ListPurchasesRequest {
+export interface ListPurchasesRequest {
   customerId?: string;
   afterCursor?: string;
   limit?: number;
@@ -42,7 +42,7 @@ interface ListPurchasesRequest {
   after?: number;
 }
 
-interface Purchase {
+export interface Purchase {
   id: string;
   anonymous: boolean;
   startTime: number;
@@ -62,16 +62,16 @@ interface Purchase {
   };
 }
 
-interface ListPurchasesResponse {
+export interface ListPurchasesResponse {
   purchases: Purchase[];
   afterCursor: string | null;
 }
 
-interface CheckConsumptionRequest {
+export interface CheckConsumptionRequest {
   purchaseId: string;
 }
 
-interface CheckConsumptionResponse {
+export interface CheckConsumptionResponse {
   dataUsageRemainingInBytes: number;
   status: string;
 }

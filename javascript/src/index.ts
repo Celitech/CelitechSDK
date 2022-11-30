@@ -12,7 +12,7 @@ interface Credentials {
   environment: "PRODUCTION" | "DEVELOPMENT";
 }
 
-class Celitech {
+export class Celitech {
   public readonly destinations;
   public readonly purchases;
   public readonly packages;
@@ -32,4 +32,45 @@ class Celitech {
   }
 }
 
-export = Celitech;
+//Interfaces
+export {
+  CreateCustomerRequest,
+  CreateCustomerResponse,
+  Customer,
+  ListCustomersRequest,
+  ListCustomersResponse,
+} from "./classes/Customers";
+
+export { Destination, DestinationsListResponse } from "./classes/Destinations";
+
+export {
+  CheckConsumptionRequest,
+  CheckConsumptionResponse,
+  CreatePurchaseRequest,
+  CreatePurchaseResponse,
+  EditPurchaseRequest,
+  EditPurchaseResponse,
+  ListPurchasesRequest,
+  ListPurchasesResponse,
+  Purchase,
+} from "./classes/Purchases";
+
+export {
+  Package,
+  PackagesListRequest,
+  PackagesListResponse,
+} from "./classes/Packages";
+
+export {
+  EsimDeviceResponse,
+  EsimHistoryResponse,
+  EsimMACResponse,
+  EsimRequest,
+  EsimStatusResponse,
+  History,
+} from "./classes/Esim";
+
+export {
+  CreateSessionRequest,
+  CreateSessionResponse,
+} from "./classes/Sessions";

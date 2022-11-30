@@ -1,10 +1,10 @@
 import { AxiosInstance } from "axios";
 
-interface EsimRequest {
+export interface EsimRequest {
   iccid: string;
 }
 
-interface EsimStatusResponse {
+export interface EsimStatusResponse {
   esim: {
     iccid: string;
     smdpAddress: string;
@@ -13,7 +13,7 @@ interface EsimStatusResponse {
   };
 }
 
-interface EsimDeviceResponse {
+export interface EsimDeviceResponse {
   device: {
     oem: string;
     hardwareName: string;
@@ -22,19 +22,19 @@ interface EsimDeviceResponse {
   };
 }
 
-interface History {
+export interface History {
   status: string;
   date: number;
 }
 
-interface EsimHistoryResponse {
+export interface EsimHistoryResponse {
   esim: {
     iccid: string;
     history: History[];
   };
 }
 
-interface EsimMACResponse {
+export interface EsimMACResponse {
   esim: {
     iccid: string;
     smdpAddress: string;
