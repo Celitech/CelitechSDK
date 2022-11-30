@@ -10,7 +10,7 @@
 
 Typescript/Javascript library for interacting with the Celitech API
 
-![Lint/Test](https://github.com/Celitech/CelitechSDK/actions/workflows/linting.yml/badge.svg)
+![CI](https://github.com/Celitech/CelitechSDK/actions/workflows/linting.yml/badge.svg)
 [![NPM version](https://img.shields.io/npm/v/@celitech/celitech-sdk)](https://www.npmjs.com/package/@celitech/celitech-sdk)
 
 ## Usage Documentation
