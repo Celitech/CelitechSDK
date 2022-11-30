@@ -1,10 +1,10 @@
 import { AxiosInstance } from "axios";
 
-interface CreateSessionRequest {
+export interface CreateSessionRequest {
   customerId: string;
 }
 
-interface CreateSessionResponse {
+export interface CreateSessionResponse {
   session: {
     id: string;
     expiresAt: number;

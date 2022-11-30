@@ -1,11 +1,11 @@
 import { AxiosInstance } from "axios";
 
-interface Destination {
+export interface Destination {
   name: string;
   destination: string;
 }
 
-type DestinationsListResponse = {
+export type DestinationsListResponse = {
   destinations: Destination[];
 };
 

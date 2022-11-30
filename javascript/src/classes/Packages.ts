@@ -1,6 +1,6 @@
 import { AxiosInstance } from "axios";
 
-interface PackagesListRequest {
+export interface PackagesListRequest {
   destination?: string;
   startTime?: number;
   endtime?: number;
@@ -9,7 +9,7 @@ interface PackagesListRequest {
   limit?: number;
 }
 
-interface Package {
+export interface Package {
   id: string;
   destination: string;
   dataLimitInBytes: number;
@@ -18,7 +18,7 @@ interface Package {
   priceInCents: number;
 }
 
-interface PackagesListResponse {
+export interface PackagesListResponse {
   packages: Package[];
   afterCursor: string | null;
 }

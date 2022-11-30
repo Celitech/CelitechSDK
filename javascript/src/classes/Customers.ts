@@ -1,16 +1,16 @@
 import { AxiosInstance } from "axios";
 
-interface CreateCustomerRequest {
+export interface CreateCustomerRequest {
   metadata: string;
 }
 
-interface CreateCustomerResponse {
+export interface CreateCustomerResponse {
   id: string;
   metadata: string;
   createdAt: number;
 }
 
-interface ListCustomersRequest {
+export interface ListCustomersRequest {
   id?: string;
   afterCursor?: string;
   limit?: number;
@@ -18,13 +18,13 @@ interface ListCustomersRequest {
   after?: number;
 }
 
-interface Customer {
+export interface Customer {
   id: string;
   metadata: string;
   createdAt: number;
 }
 
-interface ListCustomersResponse {
+export interface ListCustomersResponse {
   afterCursor: string | null;
   customers: Customer[];
 }
