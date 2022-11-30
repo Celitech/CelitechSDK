@@ -1,7 +1,7 @@
 import { AxiosInstance } from "axios";
 
 export interface CreateSessionRequest {
-  customerId: string;
+  customerId?: string;
 }
 
 export interface CreateSessionResponse {
@@ -19,9 +19,9 @@ export class Sessions {
   }
 
   public async create(
-    request: CreateSessionRequest
+    request?: CreateSessionRequest
   ): Promise<CreateSessionResponse> {
-    const response = await this.axiosInstance.post("/sessions", request);
+    const response = await this.axiosInstance.post("/sessions", { ...request });
     return response.data;
   }
 }
