@@ -3,7 +3,7 @@ import { AxiosInstance } from "axios";
 export interface PackagesListRequest {
   destination?: string;
   startTime?: number;
-  endtime?: number;
+  endTime?: number;
   duration?: number;
   afterCursor?: string;
   limit?: number;
