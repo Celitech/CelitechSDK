@@ -5,6 +5,7 @@ import { Purchases } from "./classes/Purchases";
 import { Packages } from "./classes/Packages";
 import { Esim } from "./classes/Esim";
 import { Sessions } from "./classes/Sessions";
+import { Iframe } from "./classes/Iframe";
 
 interface Credentials {
   clientId: string;
@@ -19,6 +20,7 @@ export class Celitech {
   public readonly customers;
   public readonly esim;
   public readonly sessions;
+  public readonly iframe;
 
   public constructor({ clientId, clientSecret, environment }: Credentials) {
     const axiosInstance = getAxiosInstance(clientId, clientSecret, environment);
@@ -29,6 +31,7 @@ export class Celitech {
     this.customers = new Customers(axiosInstance);
     this.esim = new Esim(axiosInstance);
     this.sessions = new Sessions(axiosInstance);
+    this.iframe = new Iframe(axiosInstance);
   }
 }
 
