@@ -5,9 +5,7 @@ export interface CreateCustomerRequest {
 }
 
 export interface CreateCustomerResponse {
-  id: string;
-  metadata: string;
-  createdAt: number;
+  customer: { id: string; metadata: string; createdAt: number };
 }
 
 export interface ListCustomersRequest {
