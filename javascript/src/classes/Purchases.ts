@@ -5,8 +5,8 @@ export interface CreatePurchaseRequest {
   dataLimitInGB: number;
   startTime: number;
   endTime: number;
-  customerId?: number;
-  sessionId?: number;
+  customerId?: string;
+  sessionId?: string;
 }
 
 export interface CreatePurchaseResponse {
