@@ -10,7 +10,7 @@ import { Iframe } from "./classes/Iframe";
 interface Credentials {
   clientId: string;
   clientSecret: string;
-  environment: "PRODUCTION" | "DEVELOPMENT";
+  environment?: string;
 }
 
 export class Celitech {
@@ -22,7 +22,11 @@ export class Celitech {
   public readonly sessions;
   public readonly iframe;
 
-  public constructor({ clientId, clientSecret, environment }: Credentials) {
+  public constructor({
+    clientId,
+    clientSecret,
+    environment = "PRODUCTION", //Default Value
+  }: Credentials) {
     const axiosInstance = getAxiosInstance(clientId, clientSecret, environment);
 
     this.destinations = new Destinations(axiosInstance);

@@ -11,6 +11,8 @@ import tokenProvider from "axios-token-interceptor";
 import {
   TEST_API_URL,
   TEST_OAUTH2_URL,
+  QA_API_URL,
+  QA_OAUTH2_URL,
   LIVE_API_URL,
   LIVE_OAUTH2_URL,
 } from "../config/urls-config";
@@ -18,7 +20,7 @@ import {
 export function getAxiosInstance(
   clientId: string,
   clientSecret: string,
-  env: "PRODUCTION" | "DEVELOPMENT"
+  env: string
 ) {
   let OAUTH2_URL;
   let API_URL;
@@ -26,13 +28,14 @@ export function getAxiosInstance(
   if (env === "PRODUCTION") {
     OAUTH2_URL = LIVE_OAUTH2_URL;
     API_URL = LIVE_API_URL;
-  } else if (env === "DEVELOPMENT") {
+  } else if (env === "QA") {
+    OAUTH2_URL = QA_OAUTH2_URL;
+    API_URL = QA_API_URL;
+  } else if (env === "TEST") {
     OAUTH2_URL = TEST_OAUTH2_URL;
     API_URL = TEST_API_URL;
   } else {
-    throw new Error(
-      "Invalid environment (allowed values are PRODUCTION or DEVELOPMENT)"
-    );
+    throw new Error("Invalid environment");
   }
 
   const getClientCredentials = oauth.client(axios.create(), {
