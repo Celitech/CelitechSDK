@@ -5,8 +5,18 @@ export interface Destination {
   destination: string;
 }
 
+export interface DetailedDestination {
+  name: string;
+  destination: string;
+  iana_timezone: string;
+}
+
 export type DestinationsListResponse = {
   destinations: Destination[];
+};
+
+export type DestinationsListDetailsResponse = {
+  destinations: DetailedDestination[];
 };
 
 export class Destinations {
@@ -18,6 +28,11 @@ export class Destinations {
 
   public async list(): Promise<DestinationsListResponse> {
     const response = await this.axiosInstance.get("/destinations");
+    return response.data;
+  }
+
+  public async listDetails(): Promise<DestinationsListDetailsResponse> {
+    const response = await this.axiosInstance.get("/destinations/details");
     return response.data;
   }
 }
