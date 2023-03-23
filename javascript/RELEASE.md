@@ -2,16 +2,22 @@
 
 1- Commit and push all the changes to main
 
-2- Open a bash client and set the github token:
+2- Make sure that you are in the javascript directory
 
 ```
-set GITHUB_TOKEN=yourgithubtoken
+cd javascript
 ```
 
-3- Run release-it
+3- Open a bash client and set the github token:
+
+```
+export GITHUB_TOKEN=yourgithubtoken
+```
+
+4- Run release-it
 
 ```
 npm run release
 ```
 
-4- Congrats! You just released an updated dependancy
+5- Congrats! You just released an updated dependancy
