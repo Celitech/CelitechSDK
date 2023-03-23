@@ -2,7 +2,7 @@
 
 1- Commit and push all the changes to main
 
-2- Open an ssh client and set the github token:
+2- Open a bash client and set the github token:
 
 ```
 set GITHUB_TOKEN=yourgithubtoken
