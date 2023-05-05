@@ -1,11 +1,11 @@
 <h1 align="center">
-    <a style="text-decoration: none" href="https://www.celitech.com" target="_blank">
+    <a style="text-decoration: none" href="https://www.celitech.com">
       <img width="300px" src="https://raw.githubusercontent.com/Celitech/CelitechSDK/main/assets/logo.png" />
       <p align="center">CELITECH - eSIM API for Travel Companies </p>
     </a>
 </h1>
 <h2 align="center">
-  <a href="https://celitech.com" target="_blank">Website</a> | <a href="https://docs.celitech.net" target="_blank">API Reference</a>
+  <a href="https://celitech.com">Website</a> | <a href="https://docs.celitech.net">API Reference</a>
 <h2>
 
 Typescript/Javascript library for interacting with the Celitech API
