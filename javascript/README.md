@@ -1,6 +1,6 @@
 <h1 align="center">
     <a style="text-decoration: none" href="https://www.celitech.com">
-      <img width="300px" src="https://github.com/Celitech/CelitechSDK/assets/logo.png" />
+      <img width="300px" src="../assets/logo.png" />
       <p align="center">CELITECH - eSIM API for Travel Companies </p>
     </a>
 </h1>
