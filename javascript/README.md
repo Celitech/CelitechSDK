@@ -1,6 +1,6 @@
 <h1 align="center">
     <a style="text-decoration: none" href="https://www.celitech.com">
-      <img width="300px" src="https://celitech.com/wp-content/uploads/2022/11/CELITECH-eSIM-Platform_2-1024x306.jpg" />
+      <img width="300px" src="https://github.com/Celitech/CelitechSDK/assets/logo.png" />
       <p align="center">CELITECH - eSIM API for Travel Companies </p>
     </a>
 </h1>
@@ -13,9 +13,9 @@ Typescript/Javascript library for interacting with the Celitech API
 ![CI](https://github.com/Celitech/CelitechSDK/actions/workflows/linting.yml/badge.svg)
 [![NPM version](https://img.shields.io/npm/v/@celitech/celitech-sdk)](https://www.npmjs.com/package/@celitech/celitech-sdk)
 
-## Usage Documentation
+## API Reference
 
-You can find general usage documentation at <https://docs.celitech.com>. For complete API documentation with code examples for each endpoint in all of our official client libraries head over to our API documentation site at <https://api.celitech.com>.
+For a complete API reference with code examples for each endpoint in different languages - Make sure to visit https://docs.celitech.com
 
 ## Installation
 
