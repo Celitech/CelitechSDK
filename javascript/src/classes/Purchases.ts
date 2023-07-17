@@ -7,6 +7,7 @@ export interface CreatePurchaseRequest {
   endTime: number;
   customerId?: string;
   sessionId?: string;
+  email?: string;
 }
 
 export interface CreatePurchaseResponse {
@@ -40,6 +41,7 @@ export interface ListPurchasesRequest {
   limit?: number;
   before?: number;
   after?: number;
+  email?: string;
 }
 
 export interface Purchase {
@@ -74,6 +76,27 @@ export interface CheckConsumptionRequest {
 export interface CheckConsumptionResponse {
   dataUsageRemainingInBytes: number;
   status: string;
+}
+
+export interface TopUpRequest {
+  iccid: string;
+  destination: string;
+  dataLimitInGB: number;
+  startTime: number;
+  endTime: number;
+  email?: string;
+}
+
+export interface TopUpResponse {
+  purchase: {
+    id: string;
+    packageId: string;
+    startTime: number;
+    endTime: number;
+  };
+  profile: {
+    iccid: string;
+  };
 }
 
 export class Purchases {
@@ -117,6 +140,11 @@ export class Purchases {
     const response = await this.axiosInstance.get(
       `/purchases/${request.purchaseId}/consumption`
     );
+    return response.data;
+  }
+
+  public async topUp(request: TopUpRequest): Promise<TopUpResponse> {
+    const response = await this.axiosInstance.post("/purchases/topup", request);
     return response.data;
   }
 }
