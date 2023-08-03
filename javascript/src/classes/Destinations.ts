@@ -1,5 +1,7 @@
 import { AxiosInstance } from "axios";
 
+/* eslint-disable @typescript-eslint/naming-convention */
+
 export interface Destination {
   name: string;
   destination: string;
