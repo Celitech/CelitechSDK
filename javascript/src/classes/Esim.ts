@@ -42,6 +42,13 @@ export interface EsimMACResponse {
   };
 }
 
+export interface EsimCodesResponse {
+  eSIM: {
+    iccid: string;
+    activationCode: string;
+    manualActivationCode: string;
+  };
+}
 export class Esim {
   private axiosInstance;
 
@@ -72,6 +79,13 @@ export class Esim {
 
   public async mac(request: EsimRequest): Promise<EsimMACResponse> {
     const response = await this.axiosInstance.get(`/esim/${request.iccid}/mac`);
+    return response.data;
+  }
+
+  public async codes(request: EsimRequest): Promise<EsimCodesResponse> {
+    const response = await this.axiosInstance.get(
+      `/esim/${request.iccid}/codes`
+    );
     return response.data;
   }
 }
