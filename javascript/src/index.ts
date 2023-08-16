@@ -43,12 +43,19 @@ export class Celitech {
 export {
   CreateCustomerRequest,
   CreateCustomerResponse,
-  Customer,
   ListCustomersRequest,
   ListCustomersResponse,
+  Customer,
 } from "./classes/Customers";
 
-export { Destination, DestinationsListResponse } from "./classes/Destinations";
+export {
+  DestinationsListRequest,
+  DestinationsListResponse,
+  Destination,
+  DestinationsDetailsListRequest,
+  DestinationsDetailsListResponse,
+  DetailedDestination,
+} from "./classes/Destinations";
 
 export {
   CheckConsumptionRequest,
@@ -60,15 +67,18 @@ export {
   ListPurchasesRequest,
   ListPurchasesResponse,
   Purchase,
+  TopUpRequest,
+  TopUpResponse,
 } from "./classes/Purchases";
 
 export {
-  Package,
   PackagesListRequest,
   PackagesListResponse,
+  Package,
 } from "./classes/Packages";
 
 export {
+  EsimCodesResponse,
   EsimDeviceResponse,
   EsimHistoryResponse,
   EsimMACResponse,

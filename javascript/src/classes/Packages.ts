@@ -7,6 +7,7 @@ export interface PackagesListRequest {
   duration?: number;
   afterCursor?: string;
   limit?: number;
+  tags?: string;
 }
 
 export interface Package {

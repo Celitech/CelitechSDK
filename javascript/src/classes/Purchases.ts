@@ -8,6 +8,7 @@ export interface CreatePurchaseRequest {
   customerId?: string;
   sessionId?: string;
   email?: string;
+  tags?: string;
 }
 
 export interface CreatePurchaseResponse {
@@ -27,6 +28,7 @@ export interface EditPurchaseRequest {
   purchaseId: string;
   startTime: number;
   endTime: number;
+  tags?: string;
 }
 
 export interface EditPurchaseResponse {
@@ -42,6 +44,7 @@ export interface ListPurchasesRequest {
   before?: number;
   after?: number;
   email?: string;
+  tags?: string;
 }
 
 export interface Purchase {
@@ -71,6 +74,7 @@ export interface ListPurchasesResponse {
 
 export interface CheckConsumptionRequest {
   purchaseId: string;
+  tags?: string;
 }
 
 export interface CheckConsumptionResponse {
@@ -85,6 +89,7 @@ export interface TopUpRequest {
   startTime: number;
   endTime: number;
   email?: string;
+  tags?: string;
 }
 
 export interface TopUpResponse {
@@ -138,7 +143,8 @@ export class Purchases {
     request: CheckConsumptionRequest
   ): Promise<CheckConsumptionResponse> {
     const response = await this.axiosInstance.get(
-      `/purchases/${request.purchaseId}/consumption`
+      `/purchases/${request.purchaseId}/consumption`,
+      { params: request }
     );
     return response.data;
   }
