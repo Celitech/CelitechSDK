@@ -2,7 +2,6 @@ import { AxiosInstance } from "axios";
 
 export interface CreateSessionRequest {
   customerId?: string;
-  tags?: string;
 }
 
 export interface CreateSessionResponse {

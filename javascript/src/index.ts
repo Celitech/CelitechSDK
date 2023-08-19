@@ -49,12 +49,10 @@ export {
 } from "./classes/Customers";
 
 export {
-  DestinationsListRequest,
   DestinationsListResponse,
   Destination,
-  DestinationsDetailsListRequest,
   DestinationsDetailsListResponse,
-  DetailedDestination,
+  DestinationDetails,
 } from "./classes/Destinations";
 
 export {

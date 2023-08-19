@@ -2,7 +2,6 @@ import { AxiosInstance } from "axios";
 
 export interface CreateCustomerRequest {
   metadata: string;
-  tags?: string;
 }
 
 export interface CreateCustomerResponse {
@@ -15,7 +14,6 @@ export interface ListCustomersRequest {
   limit?: number;
   before?: number;
   after?: number;
-  tags?: string;
 }
 
 export interface Customer {

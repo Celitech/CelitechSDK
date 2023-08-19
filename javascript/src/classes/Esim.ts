@@ -2,7 +2,6 @@ import { AxiosInstance } from "axios";
 
 export interface EsimRequest {
   iccid: string;
-  tags?: string;
 }
 
 export interface EsimStatusResponse {
@@ -66,40 +65,26 @@ export class Esim {
 
   public async device(request: EsimRequest): Promise<EsimDeviceResponse> {
     const response = await this.axiosInstance.get(
-      `/esim/${request.iccid}/device`,
-      {
-        params: request,
-      }
+      `/esim/${request.iccid}/device`
     );
     return response.data;
   }
 
   public async history(request: EsimRequest): Promise<EsimHistoryResponse> {
     const response = await this.axiosInstance.get(
-      `/esim/${request.iccid}/history`,
-      {
-        params: request,
-      }
+      `/esim/${request.iccid}/history`
     );
     return response.data;
   }
 
   public async mac(request: EsimRequest): Promise<EsimMACResponse> {
-    const response = await this.axiosInstance.get(
-      `/esim/${request.iccid}/mac`,
-      {
-        params: request,
-      }
-    );
+    const response = await this.axiosInstance.get(`/esim/${request.iccid}/mac`);
     return response.data;
   }
 
   public async codes(request: EsimRequest): Promise<EsimCodesResponse> {
     const response = await this.axiosInstance.get(
-      `/esim/${request.iccid}/codes`,
-      {
-        params: request,
-      }
+      `/esim/${request.iccid}/codes`
     );
     return response.data;
   }

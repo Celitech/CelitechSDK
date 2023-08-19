@@ -2,31 +2,23 @@ import { AxiosInstance } from "axios";
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
-export interface DestinationsListRequest {
-  tags?: string;
-}
-
 export interface Destination {
   name: string;
   destination: string;
+}
+
+export interface DestinationDetails {
+  name: string;
+  destination: string;
+  iana_timezone: string;
 }
 
 export type DestinationsListResponse = {
   destinations: Destination[];
 };
 
-export interface DestinationsDetailsListRequest {
-  tags?: string;
-}
-
-export interface DetailedDestination {
-  name: string;
-  destination: string;
-  iana_timezone: string;
-}
-
 export type DestinationsDetailsListResponse = {
-  destinations: DetailedDestination[];
+  destinations: DestinationDetails[];
 };
 
 export class Destinations {
@@ -36,30 +28,12 @@ export class Destinations {
     this.axiosInstance = axiosInstance;
   }
 
-  public async list(
-    request?: DestinationsListRequest
-  ): Promise<DestinationsListResponse> {
-    if (request) {
-      const response = await this.axiosInstance.get("/destinations", {
-        params: request,
-      });
-      return response.data;
-    }
-
+  public async list(): Promise<DestinationsListResponse> {
     const response = await this.axiosInstance.get("/destinations");
     return response.data;
   }
 
-  public async listDetails(
-    request?: DestinationsDetailsListRequest
-  ): Promise<DestinationsDetailsListResponse> {
-    if (request) {
-      const response = await this.axiosInstance.get("/destinations/details", {
-        params: request,
-      });
-      return response.data;
-    }
-
+  public async listDetails(): Promise<DestinationsDetailsListResponse> {
     const response = await this.axiosInstance.get("/destinations/details");
     return response.data;
   }
