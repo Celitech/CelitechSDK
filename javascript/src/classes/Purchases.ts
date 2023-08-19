@@ -8,6 +8,7 @@ export interface CreatePurchaseRequest {
   customerId?: string;
   sessionId?: string;
   email?: string;
+  src?: string;
 }
 
 export interface CreatePurchaseResponse {
@@ -85,6 +86,7 @@ export interface TopUpRequest {
   startTime: number;
   endTime: number;
   email?: string;
+  src?: string;
 }
 
 export interface TopUpResponse {
