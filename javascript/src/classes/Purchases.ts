@@ -58,6 +58,7 @@ export interface Purchase {
     id: string;
     dataLimitInBytes: number;
     destination: string;
+    destinationName: string;
     priceInCents: number;
   };
   esim: {
