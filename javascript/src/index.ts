@@ -11,6 +11,7 @@ interface Credentials {
   clientId: string;
   clientSecret: string;
   environment?: string;
+  
 }
 
 export class Celitech {
