@@ -24,7 +24,7 @@ export interface EsimDeviceResponse {
 
 export interface History {
   status: string;
-  date: number;
+  statusDate: string;
 }
 
 export interface EsimHistoryResponse {

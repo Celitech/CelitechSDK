@@ -3,10 +3,25 @@ import { AxiosInstance } from "axios";
 export interface CreatePurchaseRequest {
   destination: string;
   dataLimitInGB: number;
+  /**
+   * Start date of the package's validity in the format 'yyyy-MM-dd'.
+   * This date can be set to the current day or any day within the next 12 months.
+   */
+  startDate: string;
+  /**
+   * End date of the package's validity in the format 'yyyy-MM-dd'.
+   * End date can be maximum 60 days after Start date.
+   */
+  endDate: string;
+  /**
+   * @deprecated
+   */
   startTime: number;
+  /**
+   * @deprecated
+   */
   endTime: number;
   customerId?: string;
-  sessionId?: string;
   email?: string;
   src?: string;
 }
@@ -15,8 +30,8 @@ export interface CreatePurchaseResponse {
   purchase: {
     id: string;
     packageId: string;
-    startTime: number;
-    endTime: number;
+    startDate: string;
+    endDate: string;
   };
   profile: {
     iccid: string;
@@ -26,23 +41,46 @@ export interface CreatePurchaseResponse {
 
 export interface EditPurchaseRequest {
   purchaseId: string;
-  startTime: number;
-  endTime: number;
+  startDate: string;
+  endDate: string;
+  /**
+   * @deprecated
+   */
+  startTime?: number;
+  /**
+   * @deprecated
+   */
+  endTime?: number;
 }
 
 export interface EditPurchaseResponse {
   purchaseId: string;
-  newStartTime: number;
-  newEndTime: number;
+  newStartDate: string;
+  newEndDate: string;
 }
 
 export interface ListPurchasesRequest {
+  iccid?: string;
+  /**
+   * Start date of the interval for filtering purchases in the format 'yyyy-MM-dd'
+   */
+  afterDate?: string;
+  /**
+   * End date of the interval for filtering purchases in the format 'yyyy-MM-dd'
+   */
+  beforeDate?: string;
   customerId?: string;
   afterCursor?: string;
   limit?: number;
-  before?: number;
-  after?: number;
   email?: string;
+  /**
+   * @deprecated
+   */
+  before?: number;
+  /**
+   * @deprecated
+   */
+  after?: number;
 }
 
 export interface Purchase {
@@ -82,9 +120,24 @@ export interface CheckConsumptionResponse {
 
 export interface TopUpRequest {
   iccid: string;
-  destination: string;
   dataLimitInGB: number;
+  /**
+   * Start date of the package's validity in the format 'yyyy-MM-dd'.
+   * This date can be set to the current day or any day within the next 12 months.
+   */
+  startDate: string;
+  /**
+   * End date of the package's validity in the format 'yyyy-MM-dd'.
+   * End date can be maximum 60 days after Start date.
+   */
+  endDate: string;
+  /**
+   * @deprecated
+   */
   startTime: number;
+  /**
+   * @deprecated
+   */
   endTime: number;
   email?: string;
   src?: string;
@@ -94,8 +147,8 @@ export interface TopUpResponse {
   purchase: {
     id: string;
     packageId: string;
-    startTime: number;
-    endTime: number;
+    startDate: string;
+    endDate: string;
   };
   profile: {
     iccid: string;
