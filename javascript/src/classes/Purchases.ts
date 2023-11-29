@@ -30,6 +30,14 @@ export interface CreatePurchaseResponse {
   purchase: {
     id: string;
     packageId: string;
+    /**
+     * @deprecated
+     */
+    startTime: number;
+    /**
+     * @deprecated
+     */
+    endTime: number;
     startDate: string;
     endDate: string;
   };
@@ -57,6 +65,14 @@ export interface EditPurchaseResponse {
   purchaseId: string;
   newStartDate: string;
   newEndDate: string;
+  /**
+   * @deprecated
+   */
+  newStartTime: number;
+  /**
+   * @deprecated
+   */
+  newEndTime: number;
 }
 
 export interface ListPurchasesRequest {
@@ -149,6 +165,14 @@ export interface TopUpResponse {
     packageId: string;
     startDate: string;
     endDate: string;
+    /**
+     * @deprecated
+     */
+    startTime: number;
+    /**
+     * @deprecated
+     */
+    endTime: number;
   };
   profile: {
     iccid: string;
