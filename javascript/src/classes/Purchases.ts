@@ -7,29 +7,31 @@ export interface CreatePurchaseRequest {
    * Start date of the package's validity in the format 'yyyy-MM-dd'.
    * This date can be set to the current day or any day within the next 12 months.
    */
-  startDate: string;
+  startDate?: string;
   /**
    * End date of the package's validity in the format 'yyyy-MM-dd'.
    * End date can be maximum 60 days after Start date.
    */
-  endDate: string;
-  /**
-   * @deprecated
-   */
-  startTime: number;
-  /**
-   * @deprecated
-   */
-  endTime: number;
+  endDate?: string;
   customerId?: string;
   email?: string;
   src?: string;
+  /**
+   * @deprecated
+   */
+  startTime?: number;
+  /**
+   * @deprecated
+   */
+  endTime?: number;
 }
 
 export interface CreatePurchaseResponse {
   purchase: {
     id: string;
     packageId: string;
+    startDate: string;
+    endDate: string;
     /**
      * @deprecated
      */
@@ -38,8 +40,6 @@ export interface CreatePurchaseResponse {
      * @deprecated
      */
     endTime: number;
-    startDate: string;
-    endDate: string;
   };
   profile: {
     iccid: string;
@@ -49,8 +49,8 @@ export interface CreatePurchaseResponse {
 
 export interface EditPurchaseRequest {
   purchaseId: string;
-  startDate: string;
-  endDate: string;
+  startDate?: string;
+  endDate?: string;
   /**
    * @deprecated
    */
@@ -141,22 +141,22 @@ export interface TopUpRequest {
    * Start date of the package's validity in the format 'yyyy-MM-dd'.
    * This date can be set to the current day or any day within the next 12 months.
    */
-  startDate: string;
+  startDate?: string;
   /**
    * End date of the package's validity in the format 'yyyy-MM-dd'.
    * End date can be maximum 60 days after Start date.
    */
-  endDate: string;
+  endDate?: string;
+  email?: string;
+  src?: string;
   /**
    * @deprecated
    */
-  startTime: number;
+  startTime?: number;
   /**
    * @deprecated
    */
   endTime: number;
-  email?: string;
-  src?: string;
 }
 
 export interface TopUpResponse {
