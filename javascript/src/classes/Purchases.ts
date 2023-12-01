@@ -13,7 +13,6 @@ export interface CreatePurchaseRequest {
    * End date can be maximum 60 days after Start date.
    */
   endDate?: string;
-  customerId?: string;
   email?: string;
   src?: string;
   /**
@@ -85,7 +84,6 @@ export interface ListPurchasesRequest {
    * End date of the interval for filtering purchases in the format 'yyyy-MM-dd'
    */
   beforeDate?: string;
-  customerId?: string;
   afterCursor?: string;
   limit?: number;
   email?: string;
@@ -156,7 +154,7 @@ export interface TopUpRequest {
   /**
    * @deprecated
    */
-  endTime: number;
+  endTime?: number;
 }
 
 export interface TopUpResponse {
