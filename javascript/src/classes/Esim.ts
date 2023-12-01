@@ -24,6 +24,10 @@ export interface EsimDeviceResponse {
 
 export interface History {
   status: string;
+  statusDate: string;
+  /**
+   * @deprecated
+   */
   date: number;
 }
 

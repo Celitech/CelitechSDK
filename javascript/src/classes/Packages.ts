@@ -2,11 +2,22 @@ import { AxiosInstance } from "axios";
 
 export interface PackagesListRequest {
   destination?: string;
-  startTime?: number;
-  endTime?: number;
-  duration?: number;
+  startDate?: string;
+  endDate?: string;
   afterCursor?: string;
   limit?: number;
+  /**
+   * @deprecated
+   */
+  startTime?: number;
+  /**
+   * @deprecated
+   */
+  endTime?: number;
+  /**
+   * @deprecated
+   */
+  duration?: number;
 }
 
 export interface Package {
