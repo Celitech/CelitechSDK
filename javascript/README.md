@@ -11,7 +11,7 @@
 Typescript/Javascript library for interacting with the Celitech API
 
 ![CI](https://github.com/Celitech/CelitechSDK/actions/workflows/linting.yml/badge.svg)
-[![NPM version](https://img.shields.io/npm/v/@celitech/celitech-sdk)](https://www.npmjs.com/package/@celitech/celitech-sdk)
+[![NPM version](https://img.shields.io/npm/v/celitech-sdk-typescript)](https://www.npmjs.com/package/celitech-sdk-typescript)
 
 ## API Reference
 
@@ -20,9 +20,9 @@ For a complete API reference with code examples for each endpoint in different l
 ## Installation
 
 ```sh
-npm install @celitech/celitech-sdk
+npm install celitech-sdk-typescript
 # or
-yarn add @celitech/celitech-sdk
+yarn add celitech-sdk-typescript
 ```
 
 ## Setup
@@ -30,7 +30,7 @@ yarn add @celitech/celitech-sdk
 The package needs to be configured with your account's clientId and clientSecret, which are available in the <a style="text-decoration: none" href="https://www.celitech.net">Celitech Dashboard.</a>
 
 ```js
-import { Celitech } from "@celitech/celitech-sdk";
+import { Celitech } from "celitech-sdk-typescript";
 
 const celitech = new Celitech({
   clientId: "CLIENT_ID",
