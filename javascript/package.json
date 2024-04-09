@@ -1,5 +1,5 @@
 {
-  "name": "@celitech/celitech-sdk",
+  "name": "@celitech/celitech-sdk-typescript",
   "version": "1.1.43",
   "description": "",
   "main": "dist/index.js",
