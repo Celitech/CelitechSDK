@@ -10,7 +10,7 @@ export interface CreatePurchaseRequest {
   startDate?: string;
   /**
    * End date of the package's validity in the format 'yyyy-MM-dd'.
-   * End date can be maximum 60 days after Start date.
+   * End date can be maximum 90 days after Start date.
    */
   endDate?: string;
   email?: string;
@@ -142,7 +142,7 @@ export interface TopUpRequest {
   startDate?: string;
   /**
    * End date of the package's validity in the format 'yyyy-MM-dd'.
-   * End date can be maximum 60 days after Start date.
+   * End date can be maximum 90 days after Start date.
    */
   endDate?: string;
   email?: string;
