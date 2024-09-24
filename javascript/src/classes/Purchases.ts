@@ -50,8 +50,8 @@ export interface CreatePurchaseResponse {
   };
   profile: {
     iccid: string;
-    manualActivationCode: string;
     activationCode: string;
+    manualActivationCode: string;
   };
 }
 
