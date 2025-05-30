@@ -49,17 +49,6 @@ export function getAxiosInstance(
     baseURL: API_URL,
   });
 
-  if (env === "QA") {
-    clientAxios.interceptors.request.use(
-      (r) => {
-        console.log("onSuccess", r);
-      },
-      (r) => {
-        console.log("onError", r);
-      }
-    );
-  }
-
   //Add interceptor (middleware) to axios instance
   clientAxios.interceptors.request.use(
     // Wraps axios-token-interceptor with oauth-specific configuration,
