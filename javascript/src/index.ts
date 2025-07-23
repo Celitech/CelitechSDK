@@ -51,8 +51,6 @@ export {
 export {
   DestinationsListResponse,
   Destination,
-  DestinationsDetailsListResponse,
-  DestinationDetails,
 } from "./classes/Destinations";
 
 export {
