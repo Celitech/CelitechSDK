@@ -10,6 +10,7 @@ export interface EsimStatusResponse {
     smdpAddress: string;
     manualActivationCode: string;
     status: string;
+    isTopUpAllowed: boolean;
   };
 }
 
